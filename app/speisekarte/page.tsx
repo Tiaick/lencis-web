@@ -95,30 +95,24 @@ export default function SpeisekartePage() {
       <section className="relative overflow-hidden" style={{ height: "60vh", minHeight: "400px" }}>
         <Image src={IMAGES.essen} alt="Speisekarte Lenci's" fill priority className="object-cover" sizes="100vw" />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(15,13,11,0.95) 0%, rgba(15,13,11,0.4) 60%, rgba(15,13,11,0.1) 100%)" }} />
-        <div
-          className="absolute bottom-0 left-0"
-          style={{ padding: "clamp(32px, 6vw, 80px)" }}
-        >
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "clamp(32px, 6vw, 80px)" }}>
           <p className="font-body" style={{ fontSize: "11px", letterSpacing: "0.28em", color: "var(--gold)", textTransform: "uppercase", marginBottom: "20px" }}>
             Täglich frisch · Wöchentlich wechselnd
           </p>
           <h1
             className="font-display"
-            style={{ fontSize: "clamp(3.5rem, 9vw, 8rem)", fontWeight: 300, color: "var(--cream)", fontStyle: "italic", lineHeight: 1 }}
+            style={{ fontSize: "clamp(3rem, 9vw, 8rem)", fontWeight: 300, color: "var(--cream)", fontStyle: "italic", lineHeight: 1, marginBottom: "28px" }}
           >
             Speisekarte
           </h1>
-        </div>
-        <div
-          className="absolute bottom-0 right-0 flex gap-4"
-          style={{ padding: "clamp(32px, 6vw, 80px)" }}
-        >
-          <a href={PDFS.speisekarte} target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Als PDF öffnen
-          </a>
-          <a href="tel:04088366884" className="btn-ghost">
-            Reservieren
-          </a>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <a href={PDFS.speisekarte} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Als PDF öffnen
+            </a>
+            <a href="tel:04088366884" className="btn-ghost">
+              Reservieren
+            </a>
+          </div>
         </div>
       </section>
 
