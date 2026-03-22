@@ -240,6 +240,19 @@ body {
   .hide-mobile { display: none; }
 }
 
+/* Nav responsive classes (avoid inline display overriding Tailwind) */
+.nav-desktop { display: none; }
+@media (min-width: 1280px) { .nav-desktop { display: flex; } }
+
+.nav-burger { display: flex; }
+@media (min-width: 1280px) { .nav-burger { display: none; } }
+
+.nav-phone { display: none; }
+@media (min-width: 1024px) { .nav-phone { display: block; } }
+
+.nav-mobile-overlay { display: flex; }
+@media (min-width: 1280px) { .nav-mobile-overlay { display: none; } }
+
 /* Sticky category nav scroll */
 .cat-nav {
   display: flex;
